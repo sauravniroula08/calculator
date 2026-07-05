@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="bg-white min-h-screen flex items-center justify-center px-4">
+
+  <div class="w-full max-w-xs border border-gray-300 rounded-lg shadow-sm p-5">
+
+    <h1 class="text-center text-lg font-bold mb-4">Calculator</h1>
+
+    <input id="display" type="text" readonly value="0" class="input-box" />
+
+    <div class="grid grid-cols-4 gap-2 mt-3">
+
+      <button class="btn" onclick="press('7')">7</button>
+      <button class="btn" onclick="press('8')">8</button>
+      <button class="btn" onclick="press('9')">9</button>
+      <button class="btn op" onclick="press('/')">&divide;</button>
+
+      <button class="btn" onclick="press('4')">4</button>
+      <button class="btn" onclick="press('5')">5</button>
+      <button class="btn" onclick="press('6')">6</button>
+      <button class="btn op" onclick="press('*')">&times;</button>
+
+      <button class="btn" onclick="press('1')">1</button>
+      <button class="btn" onclick="press('2')">2</button>
+      <button class="btn" onclick="press('3')">3</button>
+      <button class="btn op" onclick="press('-')">-</button>
+
+      <button class="btn" onclick="press('0')">0</button>
+      <button class="btn" onclick="press('.')">.</button>
+      <button class="btn eq" onclick="calculate()">=</button>
+      <button class="btn op" onclick="press('+')">+</button>
+
+      <button class="btn ac col-span-2" onclick="clearDisplay()">C</button>
+      <button class="btn ac col-span-2" onclick="backspace()">&#9003;</button>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
